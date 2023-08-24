@@ -123,7 +123,7 @@ end
     if binary {
         output_text.push_str("\nentrypoint()");
         if !Path::new(&output_path).exists() {
-            fs::create_dir(Path::new(&output_path)).unwrap();
+            fs::create_dir_all(Path::new(&output_path)).unwrap();
         }
         File::create(format!("{}/{}", output_path, output_name)).unwrap();
         fs::write(format!("{}/{}", output_path, output_name), output_text).unwrap();
