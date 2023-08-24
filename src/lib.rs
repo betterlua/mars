@@ -96,8 +96,8 @@ pub fn build(options: BuildOptions) -> Result<(), String> {
 
 function ___MAR_REQUIRE___(name)
     local module = ___MAR_MODULES___[name]
-    if not module then
-        print('module not found: ', name)  
+    if module == nil then
+        return require(name)  
     end
     return module
 end

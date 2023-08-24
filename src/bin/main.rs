@@ -38,6 +38,12 @@ pub fn main() {
     let output_name = path.remove(path.len() - 1);
     let path = path.join("/");
 
+    println!("entry_point: {}", entry_point);
+    println!("input_dir: {}", input_dir);
+    println!("output_path: {}", output_path);
+    println!("output_name: {}", output_name);
+    println!("path: {}", path);
+
     let build_opts = BuildOptions {
         entry_point,
         src_dir: input_dir,
